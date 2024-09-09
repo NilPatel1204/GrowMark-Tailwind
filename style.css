@@ -1,0 +1,179 @@
+.slider-text-1 {
+    animation-name: righttoleft;
+    animation-duration: 0.5s;
+}
+
+@keyframes righttoleft {
+    from{
+        translate: 70vw;
+        opacity: 0;
+    }
+    to {
+        translate: 0%;
+        opacity: 1;
+    }
+}
+
+.slider-text-2 {
+    animation-name: lefttoright;
+    animation-duration: 0.5s;
+}
+
+@keyframes lefttoright {
+    from{
+        translate: 0%;
+        opacity: 1;
+    }
+    to {
+        translate: 70vw;
+        opacity: 0;
+    }
+}
+
+.card-sec {
+    animation-name: righttoleftcard;
+    animation-duration: 1s;
+}
+
+@keyframes righttoleftcard {
+    from{
+        translate: -10vw;
+        opacity: 0;
+    }
+    to {
+        translate: 0;
+        opacity: 1;
+    }
+}
+
+.form-sec {
+    animation-name: bottomtotop;
+    animation-duration: 1.5s;
+}
+
+.team-text {
+    animation-name: bottomtotop;
+    animation-duration: 1.5s;
+}
+
+.testimonials-text {
+    animation-name: bottomtotop;
+    animation-duration: 1.5s;
+}
+
+.testimonials-buttons {
+    animation-name: bottomtotop;
+    animation-duration: 1.5s;
+}
+
+.testimonials-grid {
+    animation-name: bottomtotop;
+    animation-duration: 1.5s;
+}
+
+.team-grid {
+    animation-name: bottomtotop;
+    animation-duration: 1.5s;
+}
+
+.contact-sec {
+    animation-name: bottomtotop;
+    animation-duration: 1s;
+}
+
+.service-text {
+    animation-name: bottomtotop;
+    animation-duration: 1.5s;
+}
+
+.project-text {
+    animation-name: bottomtotop;
+    animation-duration: 1.5s;
+}
+
+.project-grid {
+    animation-name: bottomtotop;
+    animation-duration: 1.5s;
+}
+.service-grid {
+    animation-name: bottomtotop;
+    animation-duration: 1.5s;
+}
+
+.footer-sec {
+    animation-name: bottomtotop;
+    animation-duration: 1.5s;
+}
+
+@keyframes bottomtotop {
+    from{
+        translate: 0vw 30vh;
+        opacity: 0;
+    }
+    to{
+        translate: 0%;
+        opacity: 1;
+    }
+}
+
+.nav-animation {
+    animation-name: toptobottom;
+    animation-duration: 1s;
+}
+
+@keyframes toptobottom {
+    from{
+        translate: 0vw;
+        opacity: 1;
+    }
+    to{
+        translate: 0% -10;
+        opacity: 0;
+    }
+}
+
+.team-icons {
+    animation-name: lefttorighticons;
+    animation-duration: 0.5s;
+}
+
+@keyframes lefttorighticons {
+    from{
+        translate: -2vw;
+        opacity: 0;
+    }
+    to {
+        translate: 0%;
+        opacity: 1;
+    }
+}
+
+.mySwiper1 .swiper-slide-active {
+    background-color: #1d4ed8;
+    color: #ffffff;
+}
+
+.swiper-slide-active .profession-text {
+    color: #ffffff;
+}
+
+.dropdownHover {
+    animation: bottomtotopdropdown;
+    animation-duration: 1s;
+}
+
+@keyframes bottomtotopdropdown {
+    from{
+        translate: 0vw 10vh;
+        opacity: 0;
+    }
+    to{
+        translate: 0%;
+        opacity: 1;
+    }
+}
+
+.read-hover {
+    animation-name: bottomtotopdropdown;
+    animation-duration: 10s;
+}

@@ -1,0 +1,1034 @@
+<!-- https://karanmistryyy.pythonanywhere.com/tailwind/ -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="input.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.12.0/dist/alpine.min.js" defer></script>
+    <title>Tailwind</title>
+    <style>
+        /* Ensure you have the following CSS to style the active slide */
+        .mySwiper1 .swiper-slide-active {
+            background-color: #1d4ed8;
+            color: #ffffff;
+        }
+
+        .swiper-slide-active .profession-text {
+            color: #ffffff;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100">
+    <section class="bg-[#4761FF] text-white overflow-hidden">
+        <div class="lg:bg-[#4761FF] ">
+            <div class="hidden poster lg:flex justify-around text-white items-center py-4 font-light">
+                <span class="text-3xl font-bold text-white">GrowMark</span>
+                <ul class=" flex gap-4 justify-center items-center">
+                    <li><i class="fa-solid fa-location-dot"></i> 123 Street, New York, USA</li>
+                    <li><i class="fas fa-envelope"></i> google@gmail.com</li>
+                    <li><i class="fa-solid fa-phone"></i> +012 345 67890</li>
+                    <ul class="space-x-4 flex">
+                        <li
+                            class="h-8 w-8 text-lg bg-white rounded-full text-[#4761FF] flex justify-center items-center">
+                            <i class="fa-brands fa-facebook-f fa-sm "></i>
+                        </li>
+                        <li
+                            class="h-8 w-8 text-lg bg-white rounded-full text-[#4761FF] flex justify-center items-center">
+                            <i class="fa-brands fa-twitter"></i>
+                        </li>
+                        <li
+                            class="h-8 w-8 text-lg bg-white rounded-full text-[#4761FF] flex justify-center items-center">
+                            <i class="fa-brands fa-linkedin-in fa-sm"></i>
+                        </li>
+                    </ul>
+                </ul>
+            </div>
+    </section>
+    <!-- Navbar section start-->
+    <header class="bg-white w-full z-[1000] shadow-xl" id="header"
+        style="position: initial; animation-name: fade-1; top: 0px;">
+        <nav class="bg-white text-white py-2">
+            <div class="mx-[2%] lg:mx-[9%] xl:mx-[7%] 2xl:mx-[14%] max-w-7xl px-2 sm:px-6 lg:px-2">
+                <div class="relative flex h-10 md:h-16 items-center">
+                    <div
+                        class="absolute p-1 w-full inset-y-0 left-0 flex items-center justify-between lg:hidden bg-white">
+                        <div class="relative p-4">
+                            <h1 class="text-black font-bold text-3xl">GrowMark</h1>
+                        </div>
+                        <div>
+                            <button id="menu-button" type="button"
+                                class="inline-flex items-center justify-center p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+                                aria-controls="mobile-menu" aria-expanded="false">
+                                <span class="sr-only">Open main menu</span>
+                                <svg class="block h-6 w-6 font-bold" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                    stroke="currentColor" aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                                </svg>
+                                <svg class="hidden h-6 w-6 font-bold" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                    stroke="currentColor" aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div
+                        class="xl:gap-[31.5rem] px-5 py-3 lg:px-0 lg:py-0 z-[1000] space-y-4 lg:space-y-0 text-lg lg:items-center flex-col hidden lg:flex lg:flex-row relative justify-between">
+                        <div class="hidden sm:flex">
+                            <div class="flex space-x-9">
+                                <a href="#" class="rounded-md py-2 text-lg font-medium text-blue-600"
+                                    aria-current="page">Home</a>
+                                <a href="#about"
+                                    class="rounded-md py-2 text-lg font-normal text-black hover:text-blue-600">About</a>
+                                <a href="#service"
+                                    class="rounded-md py-2 text-lg font-normal text-black hover:text-blue-600">Services</a>
+                                <a href="#project"
+                                    class="rounded-md py-2 text-lg font-normal text-black hover:text-blue-600">Projects</a>
+                                <div class="py-2 group relative">
+                                    <button 
+                                        class="text-black flex items-center hover:text-blue-600" type="button">Pages
+                                        <svg class="w-2.5 h-2.5 ms-3" aria-hidden="true"
+                                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                                stroke-width="2" d="m1 1 4 4 4-4" />
+                                        </svg>
+                                    </button>
+
+
+                                    <div id="dropdownHover "
+                                        class="dropdownHover hidden group-hover:block z-10 absolute top-11 text-center bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
+                                        <ul class="py-2 text-md text-gray-700 dark:text-gray-200 mt-4 font-normal"
+                                            aria-labelledby="dropdownHoverButton">
+                                            <li>
+                                                <a href="#"
+                                                    class="block px-4 py-1 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Features</a>
+                                            </li>
+                                            <li>
+                                                <a href="#"
+                                                    class="block px-4 py-1 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Our
+                                                    Teams</a>
+                                            </li>
+                                            <li>
+                                                <a href="#"
+                                                    class="block px-4 py-1 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Testimonials</a>
+                                            </li>
+                                            <li>
+                                                <a href="#"
+                                                    class="block px-4 py-1 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Quotation</a>
+                                            </li>
+                                            <li>
+                                                <a href="#"
+                                                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">404
+                                                    Page</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <a href="#testimonial"
+                                    class="rounded-md py-2 text-lg font-normal text-black hover:text-blue-600">Contact</a>
+                            </div>
+
+                        </div>
+                        <div
+                            class="absolute hidden lg:flex inset-y-0 right-0 items-center pr-2 sm:static sm:ml-6 lg:ml-32 xl:ml-6">
+                            <a href="#contact" type="button"
+                                class="bg-[#4761FF] text-lg text-white lg:px-3 lg:py-2 rounded-3xl">Get A Quote</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Mobile menu -->
+            <div id="mobile-menu" class="lg:hidden block">
+                <div class="space-y-1 px-2 pt-2">
+                    <a href="#about" class="block rounded-md px-3 py-2 text-base text-[#4761FF]"
+                        aria-current="page">Home</a>
+                    <a href="#about" class="block rounded-md px-3 py-2 text-base font-light text-black ">About</a>
+                    <a href="#team" class="block rounded-md px-3 py-2 text-base font-light text-black ">Team</a>
+                    <a href="#project" class="block rounded-md px-3 py-2 text-base font-light text-black ">Projects</a>
+                    <div class="py-2 ms-3 group">
+                        <button 
+                            class="text-black text-base font-light flex items-center hover:text-blue-600" type="button">Pages
+                            <svg class="w-2.5 h-2.5 ms-3" aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2" d="m1 1 4 4 4-4" />
+                            </svg>
+                        </button>
+
+
+                        <div id="dropdownHover "
+                            class="dropdownHover hidden group-hover:block z-10 text-cente divide-y divide-gray-100 rounded-lg dark:bg-gray-700">
+                            <ul class="pt-2 text-md text-gray-700 dark:text-gray-200 font-normal"
+                                aria-labelledby="dropdownHoverButton">
+                                <li>
+                                    <a href="#"
+                                        class="blockpy-1 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Features</a>
+                                </li>
+                                <li>
+                                    <a href="#"
+                                        class="block py-1 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Our
+                                        Teams</a>
+                                </li>
+                                <li>
+                                    <a href="#"
+                                        class="block py-1 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Testimonials</a>
+                                </li>
+                                <li>
+                                    <a href="#"
+                                        class="block py-1 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Quotation</a>
+                                </li>
+                                <li>
+                                    <a href="#"
+                                        class="block py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">404
+                                        Page</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <a href=""></a>
+
+                    <a href="#testimonial"
+                        class="block rounded-md px-3 py-2 text-base font-light text-black">Testimonials</a>
+                </div>
+            </div>
+        </nav>
+        </div>
+    </header>
+    <!-- Navbar section end -->
+
+    <!-- Slider section start -->
+    <section class="w-full swiper mySwiper2 relative bg-cover bg-center h-[450px] lg:h-screen overflow-hidden">
+        <div class="swiper-wrapper">
+            <div class="w-full relative bg-cover bg-center h-[450px] md:h-screen overflow-hidden swiper-slide"
+                style="background-image: url(images/carousel-1.jpg); ">
+                <div class="absolute inset-0 bg-opacity-50 flex items-center justify-center ">
+                    <div
+                        class="slider-text-1 text-start absolute top-[20%] text-white left-[5%] lg:w-1/2 xl:top-[33.33%] lg:left-[15%]">
+                        <span class="text-xl font-light sm:text-2xl md:text-3xl">Welcome to <span
+                                class="font-medium text-2xl sm:text-4xl md:text-5xl">GrowMark</span></span>
+                        <h1 class="text-4xl font-bold sm:text-6xl md:text-7xl">Unlock
+                            Your
+                            Business Growth</h1>
+                        <div class="button py-16 lg:py-8">
+                            <a href="#" class="bg-blue-600 px-6 py-4 my-10 rounded-3xl text-lg">Explore More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slide-buttons">
+                    <a
+                        class="absolute top-[45%] md:top-[40%] left-[2%]  lg:left-[8%] text-white rounded-full flex justify-center items-center bg-[#0065fd77] py-2 w-12 h-12 md:py-4 md:h-16 md:w-16 text-xl2 hover:bg-blue-700 swiper-button-prev2">
+                        <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
+                    </a>
+
+                    <a class="absolute top-[45%] md:top-[40%] right-[2%] text-white flex lg:right-[8%] w-12 h-12 lg:w-16 lg:h-16  bg-[#0065fd77] items-center justify-center rounded-full text-white2 hover:bg-blue-700 swiper-button-next2"
+                        href="">
+                        <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="w-full relative bg-cover bg-center h-[450px] md:h-screen overflow-hidden swiper-slide"
+                style="background-image: url(images/carousel-2.jpg); ">
+
+                <div class="absolute inset-0 bg-opacity-50 flex items-center justify-center ">
+                    <div
+                        class="slider-text-2 text-end absolute top-[20%] text-white right-[5%] lg:w-1/2 xl:top-[33.33%] lg:right-[15%]">
+                        <span class="text-xl font-light sm:text-2xl md:text-3xl">Welcome to <span
+                                class="font-medium text-2xl sm:text-4xl md:text-5xl">GrowMark</span></span>
+                        <h1 class="text-4xl font-bold sm:text-6xl md:text-7xl">Ready To Grow Your Business</h1>
+                        <div class="button py-16 lg:py-8">
+                            <a href="#" class="bg-blue-600 px-6 py-4 my-10 rounded-3xl text-lg">Explore More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slide-buttons">
+                    <a
+                        class="absolute top-[45%] md:top-[40%] left-[2%]  lg:left-[8%] text-white rounded-full flex justify-center items-center bg-[#0065fd77] py-2 w-12 h-12 md:py-4 md:h-16 md:w-16 text-xl2 hover:bg-blue-700 swiper-button-prev2">
+                        <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
+                    </a>
+
+                    <a class="absolute top-[45%] md:top-[40%] right-[2%] flex text-white lg:right-[8%]  w-12 h-12 lg:w-16 lg:h-16  bg-[#0065fd77] items-center justify-center rounded-full text-white2 hover:bg-blue-700 swiper-button-next2"
+                        href="">
+                        <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Card section start -->
+    <section class="py-20 ms-6 me-6 md:ms-0 md:me-0">
+        <div
+            class="card-sec grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 lg:mx-8 xl:mx-[17rem] md:p-3 md:px-16  lg:px-0 gap-1 md:gap-1">
+            <div class="bg-white item-2 g-white p-6 md:p-4 rounded-sm shadow-sm  flex flex-col items-start text-start">
+                <div class="mx-8 my-8 ">
+                    <div class="mb-4 ">
+                        <img src="images/icon-1.png" alt="">
+                    </div>
+                    <h3 class="text-xl font-medium md:font-medium mb-2 group-hover:text-white">Award Winning</h3>
+                    <p class="text-gray-600 mx-auto w-full group-hover:text-gray-100">Stet stet justo dolor sed duo.
+                        Ut clita sea sit ipsum diam</p>
+                </div>
+            </div>
+            <div class="bg-white item-2 g-white p-6 md:p-4 rounded-sm shadow-sm flex flex-col items-start text-start">
+                <div class="mx-8 my-8 ">
+                    <div class="mb-4 ">
+                        <img src="images/icon-6.png" alt="">
+                    </div>
+                    <div class="containe2.25remr text-start content-start">
+                        <h3 class="text-xl font-medium md:font-medium mb-2 group-hover:text-white">Professional
+                            Staff</h3>
+                        <p class="text-gray-600 mx-auto  w-full group-hover:text-gray-100 text">Stet stet justo
+                            dolor sed duo. Ut clita sea sit ipsum diam</p>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-white item-2 g-white p-6 md:p-4 rounded-sm shadow-sm flex flex-col items-start text-start">
+                <div class="mx-8 my-8 ">
+                    <div class="mb-4">
+                        <img src="images/icon-7.png" alt="">
+                    </div>
+                    <h3 class="text-xl font-medium md:font-medium mb-2 group-hover:text-white">Fair Prices</h3>
+                    <p class="text-gray-600 mx-auto w-full group-hover:text-gray-100">Stet stet justo dolor sed duo.
+                        Ut clita sea sit ipsum diam</p>
+                </div>
+            </div>
+            <div class="bg-white item-2 g-white p-6 md:p-4 rounded-sm shadow-sm flex flex-col items-start text-start">
+                <div class="mx-8 my-8 ">
+                    <div class="mb-4">
+                        <img src="images/icon-8.png" alt="">
+                    </div>
+                    <h3 class="text-xl font-medium md:font-medium mb-2 group-hover:text-white">24/7 Support</h3>
+                    <p class="text-gray-600 mx-auto w-full group-hover:text-gray-100">Stet stet justo dolor sed duo.
+                        Ut clita sea sit ipsum diam</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Image section-->
+    <section class="relative flex items-center justify-center overflow-hidden" id="about">
+        <div class="absolute bg-cover bg-center" style="background-image: url('images/slide-03.jpg');">
+            <div class="absolute"></div>
+        </div>
+        <div class="relative container lg:px-8 ">
+            <div class="lg:h-[41rem] flex flex-col lg:flex-row justify-end items-center xl:justify-end lg:items-end bg-cover bg-center overflow-hidden m-auto align-middle max-w-7xl"
+                style="background-image: url(images/about.jpg);">
+                <div class="play-button justify-center lg:mb-44 xl:mb-0">
+                    <button class="m-16 rounded-full lg:m-24 xl:m-48 2xl:m-64 play-btn" href="">
+                        <img class="h-20 " src="images/play.png" alt="">
+                    </button>
+                </div>
+                <div
+                    class="form-sec bg-white md:w-[66%] lgw-[60%] xl:w-1/2 p-6 mx-6 md:mx-0 md:ps-9 md:pb-9 text-start md:text-left rounded-t-lg lg:me-9">
+                    <div class="space-y-5 pt-8 pb-12">
+                        <span class="text-xl md:text-2xl text-blue-500">About us</span>
+                        <h2 class="text-3xl sm:text-4xl font-bold my-3">The Best Marketing
+                            Agency to Improve Your Business</h2>
+                        <p class="font-light text-gray-600 my-5">Tempor erat elitr rebum at clita. Diam
+                            dolor diam
+                            ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit
+                            clita duo justo</p>
+                        <div
+                            class="flex flex-col md:flex-row justify-center md:justify-between gap-0 md:space-x-4 space-y-5 md:space-y-0 pb-8">
+                            <div class="item-2 g-white rounded-lg flex flex-col items-start text-start">
+                                <div class="mb-4">
+                                    <img src="images/icon-5.png" alt="">
+                                </div>
+                                <h3 class="text-xl font-medium mb-2 group-hover:text-white">Managed Service</h3>
+                                <p class="font-light text-gray-600 my-5">Clita erat ipsum et
+                                    lorem et sit sed stet lorem</p>
+                            </div>
+                            <div class="item-2 g-white rounded-lg flex flex-col items-start text-start">
+                                <div class="mb-4">
+                                    <img src="images/icon-6.png" alt="">
+                                </div>
+                                <h3 class="text-xl font-medium mb-2 group-hover:text-white">Dedicated Expert</h3>
+                                <p class="font-light text-gray-600 my-5">Clita erat ipsum et
+                                    lorem et sit sed stet lorem</p>
+                            </div>
+                        </div>
+                        <a href="#" class="bg-blue-600 px-6 py-4 my-10 rounded-3xl text-lg text-white">Explore
+                            More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Services -->
+    <section class="py-16" id="service">
+        <div class="service-text container mx-auto text-center lg:mb-12 w-4/5 md:w-96 lg:w-[35rem]">
+            <span class="text-blue-600 text-xl md:text-2xl">Our Services</span>
+            <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold">Digital Marketing Services That We Offer</h2>
+        </div>
+
+        <!-- Services Grid -->
+        <div class="service-grid md:pt-16 lg:pt-0 container mx-auto xl:px-48">
+            <div
+                class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 xl:grid-cols-3 gap-9 mx-6 md:mx-1 lg:mx-40 xl:mx-0 mt-16 md:mt-0">
+                <div class="relative group">
+                    <div
+                        class="bg-white item-2 g-white p-16 md:p-16 rounded-lg flex flex-col shadow-md md:shadow-xl items-center text-center transform group-hover:-translate-y-3 group-hover:duration-500">
+                        <div class="mb-4">
+                            <img src="images/icon-5.png" alt="">
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Managed Service</h3>
+                        <p class="text-gray-600 mx-auto w-full ">Erat ipsum justo amet duo et elitr
+                            dolor, est duo duo eos lorem sed diam</p>
+                    </div>
+                    <div
+                        class="text-blue-600 absolute -z-10 group-hover:z-10 text-center top-[90%] transform group-hover:translate-y-3 group-hover:duration-300 p-1 rounded-b-lg backdrop-blur-2xl w-full bg-zinc-100 shadow-md">
+                        <a href="">
+                            Read More
+                            <i class="fa-solid fa-angles-right" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="relative group">
+                    <div
+                        class="bg-white item-2 g-white p-16 md:p-16 rounded-lg flex flex-col shadow-md md:shadow-xl items-center text-center transform group-hover:-translate-y-3 group-hover:duration-500">
+                        <div class="mb-4">
+                            <img src="images/icon-6.png" alt="">
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Internet Marketing</h3>
+                        <p class="text-gray-600">Erat ipsum justo amet duo et elitr dolor, est duo
+                            duo eos lorem sed diam.</p>
+                    </div>
+                    <div
+                        class="text-blue-600 absolute -z-10 group-hover:z-10 text-center top-[90%] transform group-hover:translate-y-3 group-hover:duration-300 p-1 rounded-b-lg backdrop-blur-2xl w-full bg-zinc-100 shadow-md">
+                        <a href="">
+                            Read More
+                            <i class="fa-solid fa-angles-right" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="relative group">
+                    <div
+                        class="bg-white item-2 g-white p-16 md:p-16 rounded-lg flex flex-col shadow-md md:shadow-xl items-center text-center transform group-hover:-translate-y-3 group-hover:duration-500">
+                        <div class="mb-4">
+                            <img src="images/icon-7.png" alt="">
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Content Marketing</h3>
+                        <p class="text-gray-600">Erat ipsum justo amet duo et elitr dolor, est duo
+                            duo eos lorem sed diam</p>
+                    </div>
+                    <div
+                        class="text-blue-600 absolute -z-10 group-hover:z-10 text-center top-[90%] transform group-hover:translate-y-3 group-hover:duration-300 p-1 rounded-b-lg backdrop-blur-2xl w-full bg-zinc-100 shadow-md">
+                        <a href="">
+                            Read More
+                            <i class="fa-solid fa-angles-right" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="relative group card-hover-parent">
+                    <div
+                        class=" bg-white item-2 g-white p-16 md:p-16 rounded-lg flex flex-col shadow-md md:shadow-xl items-center text-center transform group-hover:-translate-y-3 group-hover:duration-500">
+                        <div class="mb-4">
+                            <img src="images/icon-8.png" alt="">
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Social Marketing</h3>
+                        <p class="text-gray-600 ">Erat ipsum justo amet duo et elitr dolor, est duo
+                            duo eos lorem sed diam</p>
+                    </div>
+                    <div
+                        class="text-blue-600 absolute -z-10 group-hover:z-10 text-center top-[90%] transform group-hover:translate-y-3 group-hover:duration-300 p-1 rounded-b-lg backdrop-blur-2xl w-full bg-zinc-100 shadow-md">
+                        <a href="" class="block">
+                            Read More
+                            <i class="fa-solid fa-angles-right" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="relative group">
+                    <div
+                        class="bg-white item-2 g-white p-16 md:p-16 rounded-lg flex flex-col shadow-md md:shadow-xl items-center text-center transform group-hover:-translate-y-3 group-hover:duration-300">
+                        <div class="mb-4">
+                            <img src="images/icon-9.png" alt="">
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">B2B Marketing</h3>
+                        <p class="text-gray-600 ">Erat ipsum justo amet duo et elitr dolor, est duo
+                            duo eos lorem sed diam</p>
+                    </div>
+                    <div
+                        class="text-blue-600 absolute -z-10 group-hover:z-10 text-center top-[%] transform group-hover:translate-y-3 group-hover:duration-1000 p-1 rounded-b-lg backdrop-blur-2xl w-full bg-zinc-100 shadow-md">
+                        <a href="">
+                            Read More
+                            <i class="fa-solid fa-angles-right" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="relative group">
+                    <div
+                        class="bg-white item-2 g-white p-16 md:p-16 rounded-lg flex flex-col shadow-md md:shadow-xl items-center text-center transform group-hover:-translate-y-3 group-hover:duration-500">
+                        <div class="mb-4">
+                            <img src="images/icon-10.png" alt="">
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">E-mail Marketing</h3>
+                        <p class="text-gray-600">Erat ipsum justo amet duo et elitr dolor, est duo
+                            duo eos lorem sed diam</p>
+                    </div>
+                    <div
+                        class="text-blue-600 absolute -z-10 group-hover:z-10 text-center top-[90%] transform group-hover:translate-y-3 group-hover:duration-300 p-1 rounded-b-lg backdrop-blur-2xl w-full bg-zinc-100 shadow-md">
+                        <a href="">
+                            Read More
+                            <i class="fa-solid fa-angles-right" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Project section start -->
+    <section class="mb-12 md:py-10" id="project">
+        <div class="container mx-auto max-w-7xl">
+            <div class=" md:text-start md:mx-32 swiper mySwiper3">
+                <div class="project-text mx-9 w-4/5 md:w-[65%] lg:w-[43rem] text-center md:text-start">
+                    <span class="text-blue-600 text-lg md:text-2xl font">Our Projects</span>
+                    <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold ">We've Done Lot's Of Awesome Projects</h2>
+                </div>
+                <div class="btn flex text-start justify-center md:justify-end gap-5 m-5 ">
+                    <a
+                        class="bg-white flex shadow-md h-12 w-12 rounded-full justify-center items-center hover:bg-blue-600 hover:text-white slide-prev">
+                        <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
+                    </a>
+                    <a
+                        class="bg-white flex shadow-md h-12 w-12 rounded-full justify-center items-center hover:bg-blue-600 hover:text-white slide-next">
+                        <i class="fa-solid fa-chevron-right " aria-hidden="true"></i>
+                    </a>
+                </div>
+                <div
+                    class="project-grid grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mt-6 mx-4 md:ms-0 md:me-0 swiper-wrapper">
+                    <!-- Project Item -->
+                    <div class="bg-gray-100 relative group rounded shadow-sm swiper-slide">
+                        <div class="image">
+                            <img src="images/project-4.jpg" alt="Project Image"
+                                class="w-full rounded-t-2xl mb-4 group-hover:brightness-50">
+                        </div>
+                        <div
+                            class="hidden group-hover:flex justify-center card-ele  gap-2 absolute bottom-[61%] left-[38%]">
+                            <a class="bg-white flex shadow-md h-12 w-12 rounded-full justify-center items-center hover:bg-blue-600 hover:text-white"
+                                href="">
+                                <i class="fa-solid fa-eye" aria-hidden="true"></i>
+                            </a>
+                            <a class="bg-white flex shadow-md h-12 w-12 rounded-full justify-center items-center hover:bg-blue-600 hover:text-white"
+                                href="">
+                                <i class="fa-solid fa-link" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2">Business Target Market</h3>
+                            <p class="text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum hic,
+                                culpa expedita sunt voluptas voluptatem voluptate
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Repeat for other projects... -->
+                    <div class="bg-gray-100 rounded shadow-sm relative group swiper-slide">
+                        <div class="image ">
+                            <img src="images/project-2.jpg" alt="Project Image"
+                                class="w-full rounded-t-2xl mb-4 filter group-hover:brightness-50">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2">Social Marketing Strategy</h3>
+                            <p class="text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias
+                                suscipit
+                                voluptates mollitia impedit harum! </p>
+                        </div>
+                        <div
+                            class="hidden group-hover:flex justify-center card-ele  gap-2 absolute bottom-[61%] left-[38%]">
+                            <a class="bg-white flex shadow-md h-12 w-12 rounded-full justify-center items-center hover:bg-blue-600 hover:text-white"
+                                href="">
+                                <i class="fa-solid fa-eye" aria-hidden="true"></i>
+                            </a>
+                            <a class="bg-white flex shadow-md h-12 w-12 rounded-full justify-center items-center hover:bg-blue-600 hover:text-white"
+                                href="">
+                                <i class="fa-solid fa-link" aria-hidden="true"></i>
+                            </a>
+                        </div>
+
+                    </div>
+                    <div class=" bg-gray-100 rounded shadow-sm relative group swiper-slide">
+                        <div class="image">
+                            <img src="images/project-3.jpg" alt="Project Image"
+                                class="w-full rounded-t-2xl mb-4 group-hover:brightness-50">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2">Data Analytics & Insights</h3>
+                            <p class="text-gray-600">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellat
+                                error pariatur minus, quidem sint delectus </p>
+                        </div>
+                        <div
+                            class="hidden group-hover:flex justify-center card-ele  gap-2 absolute bottom-[61%] left-[38%]">
+                            <a class="bg-white flex shadow-md h-12 w-12 rounded-full justify-center items-center hover:bg-blue-600 hover:text-white"
+                                href="">
+                                <i class="fa-solid fa-eye" aria-hidden="true"></i>
+                            </a>
+                            <a class="bg-white flex shadow-md h-12 w-12 rounded-full justify-center items-center hover:bg-blue-600 hover:text-white"
+                                href="">
+                                <i class="fa-solid fa-link" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class=" bg-gray-100 rounded shadow-sm relative group swiper-slide">
+                        <div class="image">
+                            <img src="images/project-1.jpg" alt="Project Image"
+                                class="w-full rounded-t-2xl mb-4 group-hover:brightness-50">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2">Data Analytics & Insights</h3>
+                            <p class="text-gray-600">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellat
+                                error pariatur minus, quidem sint delectus </p>
+                        </div>
+                        <div
+                            class="hidden group-hover:flex justify-center card-ele  gap-2 absolute bottom-[61%] left-[38%]">
+                            <a class="bg-white flex shadow-md h-12 w-12 rounded-full justify-center items-center hover:bg-blue-600 hover:text-white"
+                                href="">
+                                <i class="fa-solid fa-eye" aria-hidden="true"></i>
+                            </a>
+                            <a class="bg-white flex shadow-md h-12 w-12 rounded-full justify-center items-center hover:bg-blue-600 hover:text-white"
+                                href="">
+                                <i class="fa-solid fa-link" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Contact Section Start -->
+    <section class="mx-6 lg:mx-0" id="contact">
+        <div class="container lg:mx-auto font-light flex flex-col lg:flex-row justify-between  items-center">
+            <div class="contact-sec lg:w-1/2 p-4 leading-8 text-center md:text-start">
+                <span class="text-blue-600 text-2xl font md:mb-4">Get Quote</span>
+                <h2 class="text-3xl md:text-4xl xl:text-5xl font-bold mb-4 md:w-[31rem] xl:w-[37rem]">Need Our Expert
+                    Help? We're Here!</h2>
+                <p class="text-gray-600 my-4 md:mb-8 text-start">Tempor erat elitr rebum at clita. Diam dolor diam ipsum
+                    sit. Aliqu diam
+                    amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo</p>
+                <p class="text-gray-600 my-4 md:mb-8 text-start">Tempor erat elitr rebum at clita. Diam dolor diam
+                    ipsum sit. Aliqu diam
+                    amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo</p>
+                <div class="icon flex items-center border border-indigo-600 w-fit rounded-md">
+                    <div class="bg-blue-600 h-14 w-14 rounded-md flex items-center justify-center">
+                        <i class="fa-sharp fa-solid fa-phone fa-lg text-white"></i>
+                    </div>
+                    <a href="#" class="text-blue-600 text-xl font-bold ml-3 px-2">+012 345 6789</a>
+                </div>
+            </div>
+            <div class="form-sec md:w-[43rem] lg:w-1/2 lg:p-6 ">
+                <h3 class="text-3xl font-semibold mb-4 text-gray-600">Get A Free Quote</h3>
+                <form class="space-y-4" method="get">
+                    <div class="space-y-3 md:space-y-0 md:flex md:space-x-4">
+                        <input type="text" name="name" placeholder="Your Name"
+                            class="w-full border border-gray-300 bg-transparent rounded-lg p-3" required>
+                        <input type="email" name="email" placeholder="Your Email"
+                            class="w-full border border-gray-300 bg-transparent rounded-lg p-3" required>
+                    </div>
+                    <div class="space-y-3 md:space-y-0 md:flex md:space-x-4">
+                        <input name="number" type="number" placeholder="Your Number"
+                            class="w-full border border-gray-300 bg-transparent rounded-lg p-3 " required>
+                        <select class="w-full border border-gray-300 bg-transparent rounded-lg p-3">
+                            <option value="">Choose Service</option>
+                            <option value="digital">Digital Marketing</option>
+                            <option value="internet">Internet Marketing</option>
+                            <option value="content">Content Marketing</option>
+                        </select>
+                    </div>
+                    <textarea name="Message" placeholder="Message"
+                        class="w-full border border-gray-300 bg-transparent rounded-lg p-3 my-2 h-32"
+                        required></textarea>
+                    <button type="submit"
+                        class="w-full p-5 bg-blue-600 text-white font-normal rounded-md hover:bg-blue-500">Submit
+                        Now</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our-Team Section Start -->
+    <section class="py-16 md:mx-10 lg:mx-7 xl:mx-48" id="team">
+        <div class="container mx-auto text-center mb-16">
+            <div class="team-text container mx-auto text-center mb-7 md:w-96 xl:w-1/3">
+                <span class="text-blue-600 text-2xl">Our Team</span>
+                <h2 class="text-3xl md:text-4xl ld:text-5xl mx-4 md:mx-0    font-bold">Our Expert People Ready To Help
+                    You
+                </h2>
+            </div>
+            <div class="team-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 mx-4 md:mx-0 gap-8">
+                <div class="bg-white rounded-lg shadow-md relative group">
+                    <img class="mx-auto " src="images/team-1.jpg" alt="Alex Robin">
+                    <h5 class="text-xl font-medium my-2">Alex Robin</h5>
+                    <p class="text-lg text-blue-600 font-light my-3">Founder & CEO</p>
+                    <div
+                        class="team-icons hidden group-hover:flex flex-col social-media absolute top-5 space-y-2 left-3">
+                        <a href="#"
+                            class="text-blue-700 bg-white rounded-full h-8 w-8 flex justify-center items-center"><i
+                                class="fab fa-twitter"></i></a>
+                        <a href="#"
+                            class="text-blue-700 bg-white rounded-full h-8 w-8 flex justify-center items-center"><i
+                                class="fab fa-facebook-f"></i></a>
+
+                        <a href="#"
+                            class="text-blue-700 bg-white rounded-full h-8 w-8 flex justify-center items-center"><i
+                                class="fab fa-youtube"></i></a>
+                        <a href="#"
+                            class="text-blue-700 bg-white rounded-full h-8 w-8 flex justify-center items-center"><i
+                                class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md relative group">
+                    <img class="mx-aut" src="images/team-2.jpg" alt="Adam Crew">
+                    <h5 class="text-xl font-medium my-2">Adam Crew</h5>
+                    <p class="text-lg text-blue-600 font-light my-3">Co Founder</p>
+                    <div
+                        class="team-icons hidden group-hover:flex flex-col social-media absolute top-5 space-y-2 left-3">
+                        <a href="#"
+                            class="text-blue-700 bg-white rounded-full h-8 w-8 flex justify-center items-center"><i
+                                class="fab fa-twitter"></i></a>
+                        <a href="#"
+                            class="text-blue-700 bg-white rounded-full h-8 w-8 flex justify-center items-center"><i
+                                class="fab fa-facebook-f"></i></a>
+
+                        <a href="#"
+                            class="text-blue-700 bg-white rounded-full h-8 w-8 flex justify-center items-center"><i
+                                class="fab fa-youtube"></i></a>
+                        <a href="#"
+                            class="text-blue-700 bg-white rounded-full h-8 w-8 flex justify-center items-center"><i
+                                class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md relative group">
+                    <img class="mx-auto" src="images/team-3.jpg" alt="Boris Johnson">
+                    <h5 class="text-xl font-medium my-2">Boris Johnson</h5>
+                    <p class="text-lg text-blue-600 font-light my-3">Executive Manager</p>
+                    <div
+                        class="team-icons hidden group-hover:flex flex-col social-media absolute top-5 space-y-2 left-3">
+                        <a href="#"
+                            class="text-blue-700 bg-white rounded-full h-8 w-8 flex justify-center items-center"><i
+                                class="fab fa-twitter"></i></a>
+                        <a href="#"
+                            class="text-blue-700 bg-white rounded-full h-8 w-8 flex justify-center items-center"><i
+                                class="fab fa-facebook-f"></i></a>
+
+                        <a href="#"
+                            class="text-blue-700 bg-white rounded-full h-8 w-8 flex justify-center items-center"><i
+                                class="fab fa-youtube"></i></a>
+                        <a href="#"
+                            class="text-blue-700 bg-white rounded-full h-8 w-8 flex justify-center items-center"><i
+                                class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md relative group">
+                    <img class="mx-auto" src="images/team-4.jpg" alt="Robert Jordan">
+                    <h5 class="text-xl font-medium my-2">Robert Jordan</h5>
+                    <p class="text-lg text-blue-600 font-light my-3">Digital Marketer</p>
+                    <div
+                        class="team-icons hidden group-hover:flex flex-col social-media absolute top-5 space-y-2 left-3">
+                        <a href="#"
+                            class="text-blue-700 bg-white rounded-full h-8 w-8 flex justify-center items-center"><i
+                                class="fab fa-twitter"></i></a>
+                        <a href="#"
+                            class="text-blue-700 bg-white rounded-full h-8 w-8 flex justify-center items-center"><i
+                                class="fab fa-facebook-f"></i></a>
+
+                        <a href="#"
+                            class="text-blue-700 bg-white rounded-full h-8 w-8 flex justify-center items-center"><i
+                                class="fab fa-youtube"></i></a>
+                        <a href="#"
+                            class="text-blue-700 bg-white rounded-full h-8 w-8 flex justify-center items-center"><i
+                                class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonial Section Start -->
+    <section class="mb-12 mx-4 md:mx-7 xl:mx-52" id="testimonial">
+        <div class="testimonials-text container mx-auto text-start lg:text-start">
+            <div class=" container xl:mx-24 text-center md:text-start mb-7 md:w-96 lg:w-[68%]">
+                <div class="lg:w-[31rem] xl:w-[40rem]">
+                    <span class="text-xl sm:text-2xl text-blue-600">Testimonials</span>
+                    <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold">What Clients Say About Our Services</h2>
+                </div>
+            </div>
+
+            <div class="btn flex justify-center md:justify-end gap-5 lg:me-20 mb-5 md:mb-0">
+                <a
+                    class="slide-prev bg-white flex shadow-xl h-12 w-12 rounded-full justify-center items-center hover:bg-blue-600 hover:text-white ">
+                    <i class="fa-solid fa-chevron-left " aria-hidden="true"></i>
+                </a>
+                <a
+                    class="slide-next bg-white flex shadow-xl h-12 w-12 rounded-full justify-center items-center hover:bg-blue-600 hover:text-white ">
+                    <i class="fa-solid fa-chevron-right " aria-hidden="true"></i>
+                </a>
+            </div>
+
+            <div class="testimonials-grid flex justify-center items-center md:pt-10 space-x-8 swiper mySwiper1">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 swiper-wrapper">
+                    <div class="rounded-lg shadow-lg md:w-96 swiper-slide">
+                        <div class="m-10">
+                            <img class="rounded-full mb-4 w-20 h-20" src="images/testimonial-1.jpg" alt="Client Name">
+                            <p class=" mb-4">Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et
+                                lorem et sit, sed stet lorem sit clita duo justo.</p>
+                            <h5 class="text-lg font-bold">Client Name</h5>
+                            <p class="text-indigo-600 profession-text">Profession</p>
+                        </div>
+                    </div>
+
+
+                    <div class="rounded-lg shadow-lg md:w-96 swiper-slide">
+                        <div class="m-10">
+                            <img class="rounded-full mb-4 w-20 h-20" src="images/testimonial-2.jpg" alt="Client Name">
+                            <p class=" mb-4">Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et
+                                lorem
+                                et sit, sed stet lorem sit clita duo justo.</p>
+                            <h5 class="text-lg font-bold">Client Name</h5>
+                            <p class="text-indigo-600 profession-text">Profession</p>
+                        </div>
+                    </div>
+
+                    <div class="rounded-lg shadow-lg md:w-96 swiper-slide">
+                        <div class="m-10">
+                            <img class="rounded-full mb-4 w-20 h-20" src="images/testimonial-4.jpg" alt="Client Name">
+                            <p class=" mb-4">Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et
+                                lorem
+                                et sit, sed stet lorem sit clita duo justo.</p>
+                            <h5 class="text-lg font-bold">Client Name</h5>
+                            <p class="text-indigo-600 profession-text">Profession</p>
+                        </div>
+                    </div>
+
+                    <div class="rounded-lg shadow-lg md:w-96 swiper-slide">
+                        <div class="m-10">
+                            <img class="rounded-full mb-4 w-20 h-20" src="images/testimonial-3.jpg" alt="Client Name">
+                            <p class=" mb-4">Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et
+                                lorem
+                                et sit, sed stet lorem sit clita duo justo.</p>
+                            <h5 class="text-lg font-bold">Client Name</h5>
+                            <p class="text-indigo-600 profession-text">Profession</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer Section Start -->
+    <footer class="pt-12 footer-sec">
+        <div class=" bg-gray-900 text-gray-400 py-12">
+            <div class="container mx-auto px-8 lg:px-32 xl:px-4">
+                <div
+                    class=" grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-0 md:gap-20 xl:gap-0 text-start space-y-20 md:space-y-0">
+                    <!-- Office Section -->
+                    <div class="text-lg">
+                        <h4 class="text-white text-xl font-medium mb-4">Our Office</h4>
+                        <ul class="space-y-2">
+                            <li><i class="fas fa-map-marker-alt "></i>123 Street, New York, USA</li>
+                            <li><i class="fas fa-phone-alt "></i>+012 345 67890</li>
+                            <li><i class="fas fa-envelope "></i>info@example.com</li>
+                        </ul>
+                        <div class="flex space-x-2 mt-4 ">
+                            <a href="#"
+                                class="text-black bg-white rounded-full h-8 w-8 flex justify-center items-center"><i
+                                    class="fab fa-facebook-f"></i></a>
+                            <a href="#"
+                                class="text-black bg-white rounded-full h-8 w-8 flex justify-center items-center"><i
+                                    class="fab fa-twitter"></i></a>
+                            <a href="#"
+                                class="text-black bg-white rounded-full h-8 w-8 flex justify-center items-center"><i
+                                    class="fab fa-instagram"></i></a>
+                            <a href="#"
+                                class="text-black bg-white rounded-full h-8 w-8 flex justify-center items-center"><i
+                                    class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                    <!-- Quick Links Section -->
+                    <div class="text-lg">
+                        <h4 class="text-white text-xl font-medium mb-4">Quick Links</h4>
+                        <ul class="space-y-2">
+                            <li><a href="#" class="hover:text-white"><i class="fa-solid fa-chevron-right"
+                                        aria-hidden="true"></i> About Us</a></li>
+                            <li><a href="#" class="hover:text-white"><i class="fa-solid fa-chevron-right"
+                                        aria-hidden="true"></i> Contact Us</a></li>
+                            <li><a href="#" class="hover:text-white"><i class="fa-solid fa-chevron-right"
+                                        aria-hidden="true"></i> Our Services</a></li>
+                            <li><a href="#" class="hover:text-white"><i class="fa-solid fa-chevron-right"
+                                        aria-hidden="true"></i> Terms & Conditions</a></li>
+                            <li><a href="#" class="hover:text-white"><i class="fa-solid fa-chevron-right"
+                                        aria-hidden="true"></i> Support</a></li>
+                        </ul>
+                    </div>
+                    <!-- Business Hours Section -->
+                    <div class="text-lg">
+                        <h4 class="text-white text-xl font-medium mb-4">Business Hours</h4>
+                        <ul class="space-y-2">
+                            <li>Monday - Friday<br><span class="text-white">09:00 am - 07:00 pm</span></li>
+                            <li>Saturday <br><span class="text-white">09:00 am - 12:00 pm</span></li>
+                            <li>Sunday <br><span class="text-white">Closed</span></li>
+                        </ul>
+                    </div>
+                    <!-- Newsletter Section -->
+                    <div class="text-lg">
+                        <h4 class="text-white text-xl font-medium mb-4">Newsletter</h4>
+                        <p class="mb-4">Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
+                        <form class="flex flex-row md:space-x-2 md:rounded-xl border border-white py-1">
+                            <input type="email" placeholder="Your email"
+                                class="bg-transparent pl-2 w-9/12 outline-none p-2" required>
+                            <button type="submit" class="bg-white text-black rounded-md  p-[2px]  xl:px-2">Sign
+                                Up</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright md:flex p-5 mx-auto justify-around text-center items-center text-lg bg-black w-full py-5">
+            <h1 class="text-white"><span class="text-[#B0B9AE]">©</span> Your Site Name , <span
+                    class="text-[#B0B9AE]">All Rights Reserved.</span></h1>
+            <h1 class="text-white"><span class="text-[#B0B9AE]">Designed By</span> HTML Codex <span
+                    class="text-[#B0B9AE]">Distributed By</span> ThemeWagon</h1>
+        </div>
+    </footer>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".mySwiper2", {
+            cssMode: true,
+            slidesPerView: 1,
+            loop: true,
+            navigation: {
+                nextEl: ".swiper-button-next2",
+                prevEl: ".swiper-button-prev2",
+            },
+        });
+
+        var swiper2 = new Swiper(".mySwiper1", {
+            slidesPerView: 3,
+            freeMode: true,
+            loop: true,
+            centeredSlides: true,
+            navigation: {
+                nextEl: ".slide-next",
+                prevEl: ".slide-prev",
+            },
+            breakpoints: {
+                "@0.00": {
+                    slidesPerView: 1,
+                    spaceBetween: 10, // Ensure spaceBetween is set for smaller screens
+                },
+                "@0.75": {
+                    slidesPerView: 2,
+                    spaceBetween: 10,
+                },
+                "@1.00": {
+                    slidesPerView: 3,
+                    spaceBetween: 10,
+                },
+            },
+        });
+
+        var swiper3 = new Swiper(".mySwiper3", {
+            slidesPerView: 3,
+            spaceBetween: 10,
+            freeMode: true,
+            cssMode: true,
+            loop: true,
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },
+            navigation: {
+                nextEl: ".slide-next",
+                prevEl: ".slide-prev",
+            },
+            breakpoints: {
+                "@0.00": {
+                    slidesPerView: 1,
+                    spaceBetween: 10,
+                },
+                "@0.75": {
+                    slidesPerView: 2,
+                    spaceBetween: 10,
+                },
+                "@1.00": {
+                    slidesPerView: 3,
+                    spaceBetween: 10,
+                },
+            },
+
+        });
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const button = document.getElementById('menu-button');
+            const menu = document.getElementById('mobile-menu');
+            const openIcon = button.querySelector('svg:nth-of-type(1)');
+            const closeIcon = button.querySelector('svg:nth-of-type(2)');
+
+            button.addEventListener('click', function () {
+                if (menu.classList.contains('hidden')) {
+                    menu.classList.remove('hidden');
+                    openIcon.classList.add('hidden');
+                    closeIcon.classList.remove('hidden');
+                } else {
+                    menu.classList.add('hidden');
+                    openIcon.classList.remove('hidden');
+                    closeIcon.classList.add('hidden');
+                }
+            });
+        });
+
+        window.onscroll = function () {
+            scrollFunction();
+        };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                document.getElementById("header").style.position = "fixed";
+                document.getElementById("header").style.top = "0px";
+                document.getElementById("header").style.animationName = "nav-animation";
+            } else {
+                document.getElementById("header").style.position = "initial";
+                document.getElementById("header").style.animationName = "fad-1"
+            }
+        }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+</body>
+
+</html>
+
+<!-- nil@sanskartechnolab.com 
+mailto:nil@sanskartechnolab.com
+Nil@Sanskar2024
+
+https://www.youtube.com/watch?v=xAvTgCsCHLs
+https://www.youtube.com/playlist?list=PLu71SKxNbfoBuX3f4EOACle2y-tRC5Q37
+https://dev.to/shrihankp/higher-order-array-methods-in-javascript-14e7
+https://dev.to/alexanie_/higher-order-array-methods-in-javascript-4hj2#:~:text=Higher%20Order%20Array%20Methods%20or,output%20parsed%20into%20the%20function. -->
